@@ -43,10 +43,8 @@ const checkSkipped = (currentTime) => {
   return false;
 };
 
-$video.addEventListener('play', (e) => onRecordUpdate); // console.log('play')
-$video.addEventListener('playing', (e) => onRecordUpdate); //console.log('playing')
-
+$video.addEventListener('play', onRecordUpdate); // console.log('play')
+$video.addEventListener('playing', onRecordUpdate); //console.log('playing')
 $video.addEventListener('timeupdate', onTimeUpdate);
-
-$video.addEventListener('ended', (e) => onRecordUpdate); //console.log('ended')
-$video.addEventListener('pause', (e) => onRecordUpdate); //console.log('pause')
+$video.addEventListener('ended', onRecordUpdate); //console.log('ended')
+$video.addEventListener('pause', onRecordUpdate); //console.log('pause')
