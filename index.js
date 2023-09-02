@@ -20,7 +20,7 @@ const onTimeUpdate = (event) => {
   console.log(checkSkipped(event.target.currentTime));
 };
 const onRecordUpdate = (event) => {
-  console.log(event.name);
+  console.log(event);
 };
 let prevTime = 0;
 const checkSkipped = (currentTime) => {
