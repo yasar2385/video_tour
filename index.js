@@ -20,7 +20,7 @@ const onTimeUpdate = (event) => {
   console.log(checkSkipped(event.target.currentTime));
 };
 const onRecordUpdate = (event) => {
-  console.log(event);
+  console.log(event.name);
 };
 let prevTime = 0;
 const checkSkipped = (currentTime) => {
@@ -43,10 +43,10 @@ const checkSkipped = (currentTime) => {
   return false;
 };
 
-$video.addEventListener("play", e => onRecordUpdate); // console.log('play')
-$video.addEventListener("playing", e => onRecordUpdate); //console.log('playing')
+$video.addEventListener('play', (e) => onRecordUpdate); // console.log('play')
+$video.addEventListener('playing', (e) => onRecordUpdate); //console.log('playing')
 
-$video.addEventListener("timeupdate", onTimeUpdate);
+$video.addEventListener('timeupdate', onTimeUpdate);
 
-$video.addEventListener("ended", e => onRecordUpdate);//console.log('ended')
-$video.addEventListener("pause", e => onRecordUpdate); //console.log('pause')
+$video.addEventListener('ended', (e) => onRecordUpdate); //console.log('ended')
+$video.addEventListener('pause', (e) => onRecordUpdate); //console.log('pause')
